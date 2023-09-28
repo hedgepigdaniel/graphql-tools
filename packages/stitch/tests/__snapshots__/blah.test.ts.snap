@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blah creates expected schema 1`] = `
+"type Query {
+  ccp: CcpQuery
+  ccpOffering(id: ID!): CcpOffering
+}
+
+type CcpQuery {
+  ccpEntitlement(id: ID!): CcpEntitlement
+  ccpProduct(id: ID!): CcpProduct
+}
+
+type CcpEntitlement {
+  id: ID!
+  offeringId: ID
+  offering: CcpOffering
+}
+
+type CcpProduct {
+  id: ID!
+  name: String
+}
+
+type CcpOffering {
+  id: ID!
+  productId: ID
+  product: CcpProduct
+}"
+`;
